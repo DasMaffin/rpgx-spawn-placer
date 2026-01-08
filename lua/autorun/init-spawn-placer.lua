@@ -17,9 +17,4 @@ elseif CLIENT then
     include("vgui/3D2D/entity_info.lua")
     include("cl/lookat_controller.lua")
     include("cl/settings.lua")
-
-    net.Receive("OpenPlacerConfiguration", function()
-        local msg = net.ReadString()
-        chat.AddText(Color(0, 255, 0), "[RPGXSP] ", Color(255, 255, 255), msg)
-    end)
 end
